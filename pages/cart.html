@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - ShopNow</title>
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="logo">ShopNow</div>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="cart.html" class="active">Cart (<span id="cart-count">0</span>)</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="cart-container">
+            <h1 class="page-title">Shopping Cart</h1>
+            <div class="cart-layout">
+                <div id="cart-items" class="cart-items-container"></div>
+                <div class="cart-summary-container">
+                    <div class="cart-summary">
+                        <h2>Order Summary</h2>
+                        <div class="summary-details">
+                            <div class="summary-line">
+                                <span>Subtotal</span>
+                                <span id="cart-subtotal">$0.00</span>
+                            </div>
+                            <div class="summary-line">
+                                <span>Shipping</span>
+                                <span>Free</span>
+                            </div>
+                            <div class="summary-total">
+                                <span>Total</span>
+                                <span id="cart-total">$0.00</span>
+                            </div>
+                        </div>
+                        <button id="checkout-btn" class="checkout-button">
+                            Proceed to Checkout
+                            <span class="button-icon">→</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 ShopNow. All rights reserved.</p>
+    </footer>
+
+    <script src="../js/products.js"></script>
+    <script src="../js/cart.js"></script>
+</body>
+</html>

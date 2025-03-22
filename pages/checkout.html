@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - ShopNow</title>
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="logo">ShopNow</div>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="checkout-container">
+            <h1>Checkout</h1>
+            <div class="checkout-grid">
+                <form id="checkout-form" class="checkout-form">
+                    <section class="form-section">
+                        <h2>Shipping Information</h2>
+                        <div class="form-group">
+                            <input type="text" id="name" required placeholder="Full Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" required placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="address" required placeholder="Address">
+                        </div>
+                        <div class="form-row">
+                            <input type="text" id="city" required placeholder="City">
+                            <input type="text" id="zip" required placeholder="ZIP Code">
+                        </div>
+                    </section>
+
+                    <section class="form-section">
+                        <h2>Payment Information</h2>
+                        <div class="form-group">
+                            <input type="text" id="card-number" required placeholder="Card Number">
+                        </div>
+                        <div class="form-row">
+                            <input type="text" id="expiry" required placeholder="MM/YY">
+                            <input type="text" id="cvv" required placeholder="CVV">
+                        </div>
+                    </section>
+
+                    <button type="submit" class="place-order-btn">Place Order</button>
+                </form>
+
+                <div class="order-summary">
+                    <h2>Order Summary</h2>
+                    <div id="checkout-items"></div>
+                    <div class="summary-total">
+                        <p>Total: <span id="checkout-total">$0.00</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 ShopNow. All rights reserved.</p>
+    </footer>
+
+    <script src="../js/products.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/checkout.js"></script>
+</body>
+</html>

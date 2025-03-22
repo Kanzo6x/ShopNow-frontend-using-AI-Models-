@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - ShopNow</title>
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="logo">ShopNow</div>
+            <div class="search-bar">
+                <input type="search" placeholder="Search products...">
+                <button aria-label="Search">🔍</button>
+            </div>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="products.html" class="active">Products</a>
+                <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="products-container">
+            <aside class="filters">
+                <h3>Filters</h3>
+                <div class="filter-section">
+                    <h4>Category</h4>
+                    <label><input type="checkbox" name="category" value="electronics"> Electronics</label>
+                    <label><input type="checkbox" name="category" value="fashion"> Fashion</label>
+                    <label><input type="checkbox" name="category" value="home"> Home & Living</label>
+                </div>
+                <div class="filter-section">
+                    <h4>Price Range</h4>
+                    <input type="range" min="0" max="1000" class="price-range">
+                    <div class="price-inputs">
+                        <input type="number" placeholder="Min" min="0">
+                        <input type="number" placeholder="Max" min="0">
+                    </div>
+                </div>
+            </aside>
+
+            <section class="products-section">
+                <div class="products-header">
+                    <h2>All Products</h2>
+                    <select id="sort-select">
+                        <option value="popular">Most Popular</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                    </select>
+                </div>
+                <div class="products-grid" id="products-list"></div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 ShopNow. All rights reserved.</p>
+    </footer>
+
+    <script src="../js/products.js"></script>
+    <script src="../js/cart.js"></script>
+</body>
+</html>

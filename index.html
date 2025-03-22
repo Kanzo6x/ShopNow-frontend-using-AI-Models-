@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopNow - Your Online Store</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header role="banner">
+        <nav class="main-nav" role="navigation" aria-label="Main navigation">
+            <div class="logo" role="heading" aria-level="1">ShopNow</div>
+            <form class="search-bar" role="search" aria-label="Product search">
+                <input type="search" placeholder="Search products..." aria-label="Search products">
+                <button type="submit" aria-label="Search">
+                    <span class="sr-only">Search</span>
+                    <span aria-hidden="true">🔍</span>
+                </button>
+            </form>
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="pages/products.html">Products</a>
+                <a href="pages/cart.html">Cart (<span id="cart-count">0</span>)</a>
+            </div>
+        </nav>
+    </header>
+    
+    <main id="main-content" role="main">
+        <section class="hero">
+            <h1>Welcome to ShopNow</h1>
+            <p>Discover amazing products at great prices</p>
+            <a href="pages/products.html" class="cta-button">Shop Now</a>
+        </section>
+        
+        <section class="categories">
+            <h2>Shop by Category</h2>
+            <div class="category-grid">
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="./media/electronics.jpg" alt="Electronics">
+                        <div class="category-overlay">
+                            <h3>Electronics</h3>
+                            <p>Latest gadgets and devices</p>
+                            <a href="pages/products.html?category=electronics" class="category-link">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="./media/fashion.jpg" alt="Fashion">
+                        <div class="category-overlay">
+                            <h3>Fashion</h3>
+                            <p>Trending styles and accessories</p>
+                            <a href="pages/products.html?category=fashion" class="category-link">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="./media/Home&living.jpg" alt="Home & Living">
+                        <div class="category-overlay">
+                            <h3>Home & Living</h3>
+                            <p>Beautiful home essentials</p>
+                            <a href="pages/products.html?category=home" class="category-link">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-products">
+            <h2>Featured Products</h2>
+            <div class="products-grid" id="featured-products"></div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <p>Your trusted online shopping destination</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: contact@shopnow.com</p>
+                <p>Phone: (555) 123-4567</p>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2025 ShopNow. All rights reserved.</p>
+    </footer>
+
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
